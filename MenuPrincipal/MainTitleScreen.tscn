@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://MenuPrincipal/menu_button.tscn" type="PackedScene" id=1]
+[ext_resource path="res://MenuPrincipal/images/mainmenu_.jpg" type="Texture" id=2]
+[ext_resource path="res://MenuPrincipal/images/title.png" type="Texture" id=3]
+
+[node name="MainTitleScreen" type="Node2D"]
+
+[node name="background_image" type="Sprite" parent="."]
+position = Vector2( 87, 54 )
+scale = Vector2( 0.37045, 0.406844 )
+
+[node name="mainmenu_" type="Sprite" parent="background_image"]
+position = Vector2( 1142.77, 606.145 )
+scale = Vector2( 1.43814, 1.36186 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="mnuNewGame" parent="background_image/mainmenu_" instance=ExtResource( 1 )]
+margin_left = -297.206
+margin_top = -196.018
+margin_right = 60.794
+margin_bottom = -73.0177
+focus_neighbour_top = NodePath("../mnuExit")
+focus_neighbour_bottom = NodePath("../mnuExit")
+focus_next = NodePath("../mnuExit")
+focus_previous = NodePath("../mnuExit")
+text = "New Game"
+
+[node name="mnuExit" parent="background_image/mainmenu_" instance=ExtResource( 1 )]
+margin_left = -297.0
+margin_top = -52.0
+margin_right = 63.0
+margin_bottom = 71.0
+focus_neighbour_top = NodePath("../mnuNewGame")
+focus_neighbour_bottom = NodePath("../mnuNewGame")
+text = "Exit"
+
+[node name="title" type="Sprite" parent="background_image"]
+position = Vector2( 261.844, -211.383 )
+scale = Vector2( 1.76137, 1.20439 )
+texture = ExtResource( 3 )
+centered = false

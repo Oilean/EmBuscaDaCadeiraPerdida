@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Stage 2.wav-e50fbc6abbe69e880f6364d0a3435345.sample"
+
+[deps]
+
+source_file="res://Audios/Stage 2.wav"
+dest_files=[ "res://.import/Stage 2.wav-e50fbc6abbe69e880f6364d0a3435345.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

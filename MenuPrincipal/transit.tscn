@@ -1,0 +1,56 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://images/Cadeira/Cadeira-1.png.png" type="Texture" id=5]
+[ext_resource path="res://MenuPrincipal/scripts/transit.gd" type="Script" id=8]
+
+[sub_resource type="Animation" id=1]
+resource_name = "fade"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.0431373, 0.00392157, 0.00392157, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.6 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "mudar_cena"
+} ]
+}
+
+[node name="transit" type="CanvasLayer"]
+layer = 2
+script = ExtResource( 8 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color( 0.0431373, 0.00392157, 0.00392157, 0 )
+margin_right = 896.0
+margin_bottom = 502.0
+mouse_filter = 2
+color = Color( 0.0196078, 0.270588, 0.027451, 0.94902 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="ColorRect"]
+position = Vector2( 456, 248 )
+scale = Vector2( 4.94246, 6 )
+texture = ExtResource( 5 )
+
+[node name="anima" type="AnimationPlayer" parent="."]
+anims/fade = SubResource( 1 )
